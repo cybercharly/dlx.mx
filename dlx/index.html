@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DLX Innovación Electromecánica | Equipo Eléctrico y Automatización</title>
+  <meta name="description" content="Tu mejor proveedor de equipo eléctrico, automatización y servicios industriales. Cables, transformadores, contactores, variadores y más." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-red':   '#C8102E',
+            'brand-redd':  '#9E0D24',
+            'brand-black': '#0f0f0f',
+            'brand-dark':  '#1a1a1a',
+            'brand-gray':  '#6B7280',
+          },
+          fontFamily: { sans: ['Poppins', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="text-gray-800">
+
+  <!-- Top bar -->
+  <div class="bg-brand-black text-white text-xs py-2 hidden md:block">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <div class="flex gap-6">
+        <span><i class="fas fa-phone mr-1 text-brand-red"></i> 33 1602 3850</span>
+        <span><i class="fas fa-envelope mr-1 text-brand-red"></i> contacto@dlx.mx</span>
+      </div>
+      <div class="flex gap-6">
+        <span><i class="fas fa-industry mr-1 text-brand-red"></i> Media y Baja Tensión</span>
+        <span><i class="fas fa-bolt mr-1 text-brand-red"></i> Automatización Industrial</span>
+        <span><i class="fas fa-truck mr-1 text-brand-red"></i> Entregas a todo México</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-brand-black text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 no-underline">
+        <div class="bg-brand-red text-white font-black text-2xl px-3 py-1 rounded leading-none">DLX</div>
+        <div class="text-white leading-tight hidden sm:block">
+          <div class="font-bold text-xs tracking-widest text-gray-300">INNOVACIÓN</div>
+          <div class="font-bold text-xs tracking-widest text-gray-300">ELECTROMECÁNICA</div>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html"     class="nav-link text-gray-200 active">Inicio</a>
+        <a href="servicios.html" class="nav-link text-gray-200">Servicios</a>
+        <a href="nosotros.html"  class="nav-link text-gray-200">Nosotros</a>
+        <a href="contacto.html"  class="nav-link text-gray-200">Contacto</a>
+        <a href="#" data-wa="¡Hola DLX! Me gustaría solicitar una cotización." class="btn-red text-sm px-5 py-2">
+          <i class="fab fa-whatsapp mr-1"></i> Cotizar
+        </a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-white p-2">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="bg-brand-dark md:hidden text-sm">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
+        <a href="index.html"     class="nav-link text-gray-200 py-1">Inicio</a>
+        <a href="servicios.html" class="nav-link text-gray-200 py-1">Servicios</a>
+        <a href="nosotros.html"  class="nav-link text-gray-200 py-1">Nosotros</a>
+        <a href="contacto.html"  class="nav-link text-gray-200 py-1">Contacto</a>
+        <a href="#" data-wa="¡Hola DLX! Me gustaría solicitar una cotización." class="btn-red text-center mt-1 py-3">
+          <i class="fab fa-whatsapp mr-2"></i> Cotizar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-gradient text-white py-24 md:py-32">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-brand-red font-semibold text-sm tracking-widest uppercase mb-3 animate-fadeInUp">
+          DLX Innovación Electromecánica
+        </p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-5 animate-fadeInUp delay-100">
+          Tu mejor proveedor de equipo eléctrico y automatización
+        </h1>
+        <p class="text-gray-300 text-lg mb-8 animate-fadeInUp delay-200">
+          Soluciones confiables en material eléctrico de media y baja tensión para la industria,
+          infraestructura y proyectos de ingeniería.
+        </p>
+        <div class="flex flex-wrap gap-4 animate-fadeInUp delay-300">
+          <a href="servicios.html" class="btn-red text-base px-7 py-3">
+            Ver Servicios <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+          <a href="contacto.html" class="btn-outline-white text-base px-7 py-3">
+            Contáctanos
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:grid grid-cols-2 gap-4 animate-fadeInUp delay-200">
+        <div class="bg-white/10 backdrop-blur rounded-xl p-5 border border-white/10 text-center">
+          <i class="fas fa-bolt text-brand-red text-3xl mb-3"></i>
+          <p class="font-bold">Media y Baja Tensión</p>
+          <p class="text-xs text-gray-400 mt-1">Cables y conductores industriales</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-xl p-5 border border-white/10 text-center">
+          <i class="fas fa-microchip text-brand-red text-3xl mb-3"></i>
+          <p class="font-bold">Automatización</p>
+          <p class="text-xs text-gray-400 mt-1">Variadores, PLCs y control</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-xl p-5 border border-white/10 text-center">
+          <i class="fas fa-plug text-brand-red text-3xl mb-3"></i>
+          <p class="font-bold">Transformadores</p>
+          <p class="text-xs text-gray-400 mt-1">Distribución y potencia</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-xl p-5 border border-white/10 text-center">
+          <i class="fas fa-industry text-brand-red text-3xl mb-3"></i>
+          <p class="font-bold">Soportería</p>
+          <p class="text-xs text-gray-400 mt-1">Charolas y ductos portacables</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features strip -->
+  <section class="bg-brand-red text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="flex flex-col items-center gap-2">
+        <i class="fas fa-medal text-3xl"></i>
+        <span class="font-bold text-lg">Calidad</span>
+        <span class="text-red-200 text-xs">Marcas líderes mundiales</span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <i class="fas fa-handshake text-3xl"></i>
+        <span class="font-bold text-lg">Servicio</span>
+        <span class="text-red-200 text-xs">Atención personalizada</span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <i class="fas fa-warehouse text-3xl"></i>
+        <span class="font-bold text-lg">Capacidad</span>
+        <span class="text-red-200 text-xs">Amplio catálogo disponible</span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <i class="fas fa-shield-alt text-3xl"></i>
+        <span class="font-bold text-lg">Independencia</span>
+        <span class="text-red-200 text-xs">Soluciones a tu medida</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About snippet -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-brand-red font-semibold text-sm uppercase tracking-widest mb-2">¿Quiénes somos?</p>
+        <h2 class="text-3xl font-extrabold mb-4 section-title-left">DLX Innovación Electromecánica</h2>
+        <p class="text-gray-600 mb-4 leading-relaxed">
+          Empresa dedicada a la comercialización de material eléctrico de media y baja tensión,
+          especializada en ofrecer soluciones confiables y eficientes para la industria,
+          infraestructura y proyectos de ingeniería.
+        </p>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Respaldados por marcas líderes a nivel nacional e internacional como Siemens, ABB,
+          Schneider Electric, Condumex, Elektrokabel, Danfoss y más.
+        </p>
+        <a href="nosotros.html" class="btn-red">Conoce más <i class="fas fa-arrow-right ml-2"></i></a>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-gray-50 rounded-xl p-5 border-l-4 border-brand-red">
+          <i class="fas fa-check-circle text-brand-red text-2xl mb-2"></i>
+          <h3 class="font-bold mb-1">Multimarca</h3>
+          <p class="text-sm text-gray-600">+20 fabricantes de primer nivel</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-5 border-l-4 border-brand-red">
+          <i class="fas fa-industry text-brand-red text-2xl mb-2"></i>
+          <h3 class="font-bold mb-1">Multisector</h3>
+          <p class="text-sm text-gray-600">Experiencia en 8+ industrias</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-5 border-l-4 border-brand-red">
+          <i class="fas fa-tools text-brand-red text-2xl mb-2"></i>
+          <h3 class="font-bold mb-1">Respaldo técnico</h3>
+          <p class="text-sm text-gray-600">Asesoría especializada</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-5 border-l-4 border-brand-red">
+          <i class="fas fa-truck text-brand-red text-2xl mb-2"></i>
+          <h3 class="font-bold mb-1">Disponibilidad</h3>
+          <p class="text-sm text-gray-600">Stock y entrega ágil</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-brand-red font-semibold text-sm uppercase tracking-widest mb-2">Catálogo</p>
+        <h2 class="text-3xl font-extrabold section-title">Nuestros Productos y Servicios</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="service-card bg-white rounded-2xl p-6 shadow-sm">
+          <div class="bg-brand-red/10 rounded-xl p-3 w-14 h-14 flex items-center justify-center mb-4">
+            <i class="fas fa-plug text-brand-red text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Cables y Conductores</h3>
+          <p class="text-gray-500 text-sm mb-3">YSL, TR-606, LiYY, PLTC, H07RN8-F, RV-K, THW-LS, THHW-LS y más.</p>
+          <a href="servicios.html#cables" class="text-brand-red text-sm font-semibold hover:underline">
+            Ver detalle <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+        <div class="service-card bg-white rounded-2xl p-6 shadow-sm">
+          <div class="bg-brand-red/10 rounded-xl p-3 w-14 h-14 flex items-center justify-center mb-4">
+            <i class="fas fa-network-wired text-brand-red text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Sistemas Porta Cables</h3>
+          <p class="text-gray-500 text-sm mb-3">Charolas escalera, fondo sólido, malla, ductos embisagrados y uncanal (Tecnotray).</p>
+          <a href="servicios.html#portacables" class="text-brand-red text-sm font-semibold hover:underline">
+            Ver detalle <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+        <div class="service-card bg-white rounded-2xl p-6 shadow-sm">
+          <div class="bg-brand-red/10 rounded-xl p-3 w-14 h-14 flex items-center justify-center mb-4">
+            <i class="fas fa-bolt text-brand-red text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Transformadores</h3>
+          <p class="text-gray-500 text-sm mb-3">Tipo poste, pedestal, seco y trifásico. Alta tensión 13.2 kV, 23 kV y 33 kV.</p>
+          <a href="servicios.html#transformadores" class="text-brand-red text-sm font-semibold hover:underline">
+            Ver detalle <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+        <div class="service-card bg-white rounded-2xl p-6 shadow-sm">
+          <div class="bg-brand-red/10 rounded-xl p-3 w-14 h-14 flex items-center justify-center mb-4">
+            <i class="fas fa-microchip text-brand-red text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Automatización</h3>
+          <p class="text-gray-500 text-sm mb-3">Variadores de frecuencia, PLCs, HMIs e instrumentación de control industrial.</p>
+          <a href="servicios.html#automatizacion" class="text-brand-red text-sm font-semibold hover:underline">
+            Ver detalle <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+        <div class="service-card bg-white rounded-2xl p-6 shadow-sm">
+          <div class="bg-brand-red/10 rounded-xl p-3 w-14 h-14 flex items-center justify-center mb-4">
+            <i class="fas fa-cogs text-brand-red text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Contactores y Guardamotores</h3>
+          <p class="text-gray-500 text-sm mb-3">Protección y maniobra de motores eléctricos. Siemens, ABB, Schneider Electric.</p>
+          <a href="servicios.html#contactores" class="text-brand-red text-sm font-semibold hover:underline">
+            Ver detalle <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+        <div class="service-card bg-white rounded-2xl p-6 shadow-sm">
+          <div class="bg-brand-red/10 rounded-xl p-3 w-14 h-14 flex items-center justify-center mb-4">
+            <i class="fas fa-lightbulb text-brand-red text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Iluminación Industrial</h3>
+          <p class="text-gray-500 text-sm mb-3">Luminarias LED industriales, postería, herrajes y accesorios eléctricos de alto desempeño.</p>
+          <a href="servicios.html#iluminacion" class="text-brand-red text-sm font-semibold hover:underline">
+            Ver detalle <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="servicios.html" class="btn-red text-base px-8 py-3">Ver todos los servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="bg-brand-black text-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-brand-red font-semibold text-sm uppercase tracking-widest mb-2">Sectores</p>
+        <h2 class="text-3xl font-extrabold section-title">Amplia experiencia para atender</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="industry-card bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <i class="fas fa-wine-bottle text-brand-red text-3xl mb-3"></i>
+          <p class="font-semibold text-sm">Tequilera</p>
+        </div>
+        <div class="industry-card bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <i class="fas fa-utensils text-brand-red text-3xl mb-3"></i>
+          <p class="font-semibold text-sm">Alimenticia</p>
+        </div>
+        <div class="industry-card bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <i class="fas fa-seedling text-brand-red text-3xl mb-3"></i>
+          <p class="font-semibold text-sm">Forrajera</p>
+        </div>
+        <div class="industry-card bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <i class="fas fa-drumstick-bite text-brand-red text-3xl mb-3"></i>
+          <p class="font-semibold text-sm">Cárnica</p>
+        </div>
+        <div class="industry-card bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <i class="fas fa-tractor text-brand-red text-3xl mb-3"></i>
+          <p class="font-semibold text-sm">Agroindustria</p>
+        </div>
+        <div class="industry-card bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <i class="fas fa-car text-brand-red text-3xl mb-3"></i>
+          <p class="font-semibold text-sm">Automotriz</p>
+        </div>
+        <div class="industry-card bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <i class="fas fa-wine-glass text-brand-red text-3xl mb-3"></i>
+          <p class="font-semibold text-sm">Bebidas</p>
+        </div>
+        <div class="industry-card bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <i class="fas fa-recycle text-brand-red text-3xl mb-3"></i>
+          <p class="font-semibold text-sm">Reciclados</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <p class="text-brand-red font-semibold text-sm uppercase tracking-widest mb-2">Fabricantes</p>
+        <h2 class="text-3xl font-extrabold section-title">Principales Marcas</h2>
+      </div>
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+        <div class="brand-badge">SIEMENS</div>
+        <div class="brand-badge">ABB</div>
+        <div class="brand-badge">SCHNEIDER</div>
+        <div class="brand-badge">CONDUMEX</div>
+        <div class="brand-badge">ELEKTROKABEL</div>
+        <div class="brand-badge">TECNOTRAY</div>
+        <div class="brand-badge">DANFOSS</div>
+        <div class="brand-badge">EATON</div>
+        <div class="brand-badge">KOBREX</div>
+        <div class="brand-badge">WEIDMÜLLER</div>
+        <div class="brand-badge">LAPP</div>
+        <div class="brand-badge">CONDULAC</div>
+        <div class="brand-badge">LEGRAND</div>
+        <div class="brand-badge">ALLEN-BRADLEY</div>
+        <div class="brand-badge">IFM</div>
+        <div class="brand-badge">VIAKON</div>
+        <div class="brand-badge">TECNOLITE</div>
+        <div class="brand-badge">CHAROFIL</div>
+      </div>
+      <p class="text-center text-gray-400 text-sm mt-6">Y muchas marcas más. Consulta disponibilidad.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-brand-red text-white py-16">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-extrabold mb-4">¿Tienes un proyecto o necesitas cotizar?</h2>
+      <p class="text-red-100 mb-8 text-lg">Cuéntanos qué necesitas y te enviamos una propuesta a la medida de tu proyecto.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="contacto.html" class="btn-outline-white text-base px-8 py-3">
+          <i class="fas fa-envelope mr-2"></i> Ir a Contacto
+        </a>
+        <a href="#" data-wa="¡Hola DLX! Tengo un proyecto y me gustaría solicitar una cotización."
+           class="bg-white text-brand-red font-bold px-8 py-3 rounded-md hover:bg-gray-100 transition-all hover:-translate-y-0.5 inline-block">
+          <i class="fab fa-whatsapp mr-2 text-green-600"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-black text-gray-300 py-12">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="bg-brand-red text-white font-black text-xl px-2 py-1 rounded">DLX</div>
+          <div>
+            <div class="text-white font-bold text-sm">INNOVACIÓN</div>
+            <div class="text-white font-bold text-sm">ELECTROMECÁNICA</div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          Tu mejor proveedor de equipo eléctrico, automatización y servicios industriales.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4">Navegación</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html"     class="hover:text-brand-red transition-colors">Inicio</a></li>
+          <li><a href="servicios.html" class="hover:text-brand-red transition-colors">Servicios</a></li>
+          <li><a href="nosotros.html"  class="hover:text-brand-red transition-colors">Nosotros</a></li>
+          <li><a href="contacto.html"  class="hover:text-brand-red transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4">Contáctanos</h4>
+        <ul class="space-y-3 text-sm">
+          <li><i class="fas fa-phone mr-2 text-brand-red"></i>33 1602 3850</li>
+          <li><a href="mailto:contacto@dlx.mx" class="hover:text-brand-red transition-colors"><i class="fas fa-envelope mr-2 text-brand-red"></i>contacto@dlx.mx</a></li>
+          <li><i class="fas fa-map-marker-alt mr-2 text-brand-red"></i>México</li>
+          <li class="pt-2">
+            <a href="#" data-wa="¡Hola DLX!"
+               class="bg-green-600 hover:bg-green-700 text-white text-xs font-semibold px-4 py-2 rounded-full inline-block transition-colors">
+              <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 mt-10 pt-6 border-t border-white/10 text-center text-xs text-gray-500">
+      © 2025 DLX Innovación Electromecánica. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <a href="#" data-wa="¡Hola DLX! Me gustaría solicitar información." class="wa-float">
+    <i class="fab fa-whatsapp text-xl"></i>
+    <span class="hidden sm:inline">WhatsApp</span>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

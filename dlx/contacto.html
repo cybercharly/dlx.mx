@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | DLX Innovación Electromecánica</title>
+  <meta name="description" content="Contáctanos para cotizaciones, asesoría técnica o información sobre nuestros productos. DLX Innovación Electromecánica." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-red':   '#C8102E',
+            'brand-redd':  '#9E0D24',
+            'brand-black': '#0f0f0f',
+            'brand-dark':  '#1a1a1a',
+            'brand-gray':  '#6B7280',
+          },
+          fontFamily: { sans: ['Poppins', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="text-gray-800">
+
+  <!-- Top bar -->
+  <div class="bg-brand-black text-white text-xs py-2 hidden md:block">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <div class="flex gap-6">
+        <span><i class="fas fa-phone mr-1 text-brand-red"></i> 33 1602 3850</span>
+        <span><i class="fas fa-envelope mr-1 text-brand-red"></i> contacto@dlx.mx</span>
+      </div>
+      <div class="flex gap-6">
+        <span><i class="fas fa-industry mr-1 text-brand-red"></i> Media y Baja Tensión</span>
+        <span><i class="fas fa-bolt mr-1 text-brand-red"></i> Automatización Industrial</span>
+        <span><i class="fas fa-truck mr-1 text-brand-red"></i> Entregas a todo México</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-brand-black text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 no-underline">
+        <div class="bg-brand-red text-white font-black text-2xl px-3 py-1 rounded leading-none">DLX</div>
+        <div class="text-white leading-tight hidden sm:block">
+          <div class="font-bold text-xs tracking-widest text-gray-300">INNOVACIÓN</div>
+          <div class="font-bold text-xs tracking-widest text-gray-300">ELECTROMECÁNICA</div>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html"     class="nav-link text-gray-200">Inicio</a>
+        <a href="servicios.html" class="nav-link text-gray-200">Servicios</a>
+        <a href="nosotros.html"  class="nav-link text-gray-200">Nosotros</a>
+        <a href="contacto.html"  class="nav-link text-gray-200 active">Contacto</a>
+        <a href="#" data-wa="¡Hola DLX! Me gustaría solicitar una cotización." class="btn-red text-sm px-5 py-2">
+          <i class="fab fa-whatsapp mr-1"></i> Cotizar
+        </a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-white p-2">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="bg-brand-dark md:hidden text-sm">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
+        <a href="index.html"     class="nav-link text-gray-200 py-1">Inicio</a>
+        <a href="servicios.html" class="nav-link text-gray-200 py-1">Servicios</a>
+        <a href="nosotros.html"  class="nav-link text-gray-200 py-1">Nosotros</a>
+        <a href="contacto.html"  class="nav-link text-gray-200 py-1 text-brand-red">Contacto</a>
+        <a href="#" data-wa="¡Hola DLX! Me gustaría solicitar una cotización." class="btn-red text-center mt-1 py-3">
+          <i class="fab fa-whatsapp mr-2"></i> Cotizar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-gradient text-white py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-brand-red font-semibold text-sm tracking-widest uppercase mb-3 animate-fadeInUp">Estamos para servirte</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-5 animate-fadeInUp delay-100">Contacto</h1>
+      <p class="text-gray-300 text-lg animate-fadeInUp delay-200">
+        Cuéntanos lo que necesitas y te respondemos a la brevedad con la mejor solución.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact main -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-12">
+
+      <!-- Form -->
+      <div class="md:col-span-3">
+        <p class="text-brand-red font-semibold text-sm uppercase tracking-widest mb-2">Formulario</p>
+        <h2 class="text-2xl font-extrabold mb-6 section-title-left">Solicita una cotización</h2>
+        <form id="cotiza-form" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1" for="f-nombre">Nombre completo *</label>
+              <input id="f-nombre" type="text" required placeholder="Tu nombre"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red/40 focus:border-brand-red transition-colors" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1" for="f-empresa">Empresa / Organización</label>
+              <input id="f-empresa" type="text" placeholder="Nombre de tu empresa"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red/40 focus:border-brand-red transition-colors" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1" for="f-tipo">Tipo de solicitud *</label>
+            <select id="f-tipo" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red/40 focus:border-brand-red transition-colors bg-white">
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option>Cotización de productos</option>
+              <option>Asesoría técnica</option>
+              <option>Proyecto de instalación eléctrica</option>
+              <option>Automatización / Variadores</option>
+              <option>Transformadores</option>
+              <option>Información general</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1" for="f-detalle">¿Qué necesitas? *</label>
+            <textarea id="f-detalle" required rows="5" placeholder="Describe tu requerimiento: productos, cantidades, especificaciones técnicas, etc."
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red/40 focus:border-brand-red transition-colors resize-none"></textarea>
+          </div>
+          <button type="submit" class="btn-red w-full text-base py-4 flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-xl"></i>
+            Enviar por WhatsApp
+          </button>
+          <p class="text-xs text-gray-400 text-center">Al enviar, se abrirá WhatsApp con tu mensaje precargado.</p>
+        </form>
+      </div>
+
+      <!-- Contact info -->
+      <div class="md:col-span-2 space-y-4">
+        <p class="text-brand-red font-semibold text-sm uppercase tracking-widest mb-2">Información de contacto</p>
+        <h2 class="text-2xl font-extrabold mb-5 section-title-left">Comunícate con nosotros</h2>
+
+        <!-- WhatsApp -->
+        <a href="#" data-wa="¡Hola DLX! Me gustaría solicitar información sobre sus productos."
+           class="flex items-center gap-4 bg-green-600 hover:bg-green-700 text-white rounded-xl p-4 transition-colors no-underline">
+          <div class="bg-white/20 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="fab fa-whatsapp text-xl"></i>
+          </div>
+          <div>
+            <p class="font-bold text-sm">WhatsApp</p>
+            <p class="text-green-100 text-sm">33 1602 3850</p>
+          </div>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:+523316023850"
+           class="flex items-center gap-4 bg-gray-50 hover:bg-gray-100 rounded-xl p-4 transition-colors no-underline text-gray-700">
+          <div class="bg-brand-red text-white w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-phone text-sm"></i>
+          </div>
+          <div>
+            <p class="font-bold text-sm">Teléfono</p>
+            <p class="text-gray-500 text-sm">33 1602 3850</p>
+          </div>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:contacto@dlx.mx"
+           class="flex items-center gap-4 bg-gray-50 hover:bg-gray-100 rounded-xl p-4 transition-colors no-underline text-gray-700">
+          <div class="bg-brand-red text-white w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-envelope text-sm"></i>
+          </div>
+          <div>
+            <p class="font-bold text-sm">Correo electrónico</p>
+            <p class="text-gray-500 text-sm">contacto@dlx.mx</p>
+          </div>
+        </a>
+
+        <!-- Location -->
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-4">
+          <div class="bg-brand-red text-white w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i class="fas fa-map-marker-alt text-sm"></i>
+          </div>
+          <div>
+            <p class="font-bold text-sm">Ubicación</p>
+            <p class="text-gray-500 text-sm">Vía de los Sauces 42, La Azucena, El Salto, Jalisco</p>
+            <a href="https://maps.app.goo.gl/dLzMbGRJS9oDBd6J8" target="_blank" rel="noopener"
+               class="text-brand-red text-xs font-semibold hover:underline mt-1 inline-block">
+              <i class="fas fa-external-link-alt mr-1"></i> Ver en Google Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="bg-brand-black text-white rounded-xl p-4">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="bg-brand-red w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-clock text-xs"></i>
+            </div>
+            <p class="font-bold text-sm">Horario de atención</p>
+          </div>
+          <div class="space-y-1 text-sm">
+            <div class="flex justify-between text-gray-300">
+              <span>Lunes – Viernes</span>
+              <span class="text-white font-semibold">8:00 – 18:00</span>
+            </div>
+            <div class="flex justify-between text-gray-300">
+              <span>Sábado</span>
+              <span class="text-white font-semibold">9:00 – 13:00</span>
+            </div>
+            <div class="flex justify-between text-gray-400">
+              <span>Domingo</span>
+              <span>Cerrado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Maps -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <p class="text-brand-red font-semibold text-sm uppercase tracking-widest mb-2">Ubicación</p>
+        <h2 class="text-2xl font-extrabold section-title">Encuéntranos</h2>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2527.8619302489224!2d-103.2024856!3d20.504137999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4a3c8388e98b%3A0x8f42db6f626ed31b!2sV%C3%ADa%20de%20los%20Sauces%2042%2C%20La%20Azucena%2C%2045680%20Galaxia%20Bonito%20Jalisco%2C%20Jal.!5e1!3m2!1ses-419!2smx!4v1776450220424!5m2!1ses-419!2smx"
+          width="100%"
+          height="420"
+          style="border:0; display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación DLX Innovación Electromecánica">
+        </iframe>
+      </div>
+      <div class="text-center mt-5">
+        <a href="https://maps.app.goo.gl/dLzMbGRJS9oDBd6J8" target="_blank" rel="noopener"
+           class="btn-dark text-sm px-6 py-2 inline-flex items-center gap-2">
+          <i class="fas fa-map-marked-alt"></i> Abrir en Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / CTA -->
+  <section class="bg-brand-black text-white py-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+      <div>
+        <p class="text-brand-red font-semibold text-sm uppercase tracking-widest mb-2">Preguntas frecuentes</p>
+        <h2 class="text-2xl font-extrabold mb-6 section-title-left">Respuestas rápidas</h2>
+        <div class="space-y-5">
+          <div class="border-b border-white/10 pb-4">
+            <p class="font-semibold mb-1">¿Hacen entregas fuera de la ciudad?</p>
+            <p class="text-gray-400 text-sm">Sí, realizamos envíos a toda la República Mexicana coordinando con paquetería o transporte especializado.</p>
+          </div>
+          <div class="border-b border-white/10 pb-4">
+            <p class="font-semibold mb-1">¿Tienen precios para mayoreo?</p>
+            <p class="text-gray-400 text-sm">Sí, manejamos precios especiales para volumen. Contáctanos con tu lista de materiales para una cotización.</p>
+          </div>
+          <div class="border-b border-white/10 pb-4">
+            <p class="font-semibold mb-1">¿Pueden asesorarme técnicamente?</p>
+            <p class="text-gray-400 text-sm">Absolutamente. Nuestro equipo puede orientarte en la selección del material correcto para tu proyecto.</p>
+          </div>
+          <div>
+            <p class="font-semibold mb-1">¿Cuánto tarda una cotización?</p>
+            <p class="text-gray-400 text-sm">La mayoría de las cotizaciones se responden el mismo día hábil. Usa WhatsApp para una respuesta más rápida.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center">
+        <div class="bg-brand-red rounded-2xl p-8 text-center">
+          <i class="fab fa-whatsapp text-6xl mb-4"></i>
+          <h3 class="text-2xl font-extrabold mb-3">¿Prefieres hablar directo?</h3>
+          <p class="text-red-100 text-sm mb-6">Escríbenos por WhatsApp y te atendemos de inmediato.</p>
+          <a href="#" data-wa="¡Hola DLX! Me gustaría recibir asesoría y una cotización."
+             class="bg-white text-brand-red font-extrabold px-8 py-3 rounded-lg hover:bg-gray-100 transition-all inline-block text-sm">
+            <i class="fab fa-whatsapp mr-2 text-green-600 text-lg"></i> Abrir WhatsApp
+          </a>
+          <p class="text-red-200 text-xs mt-4">33 1602 3850</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-black text-gray-300 py-12 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="bg-brand-red text-white font-black text-xl px-2 py-1 rounded">DLX</div>
+          <div>
+            <div class="text-white font-bold text-sm">INNOVACIÓN</div>
+            <div class="text-white font-bold text-sm">ELECTROMECÁNICA</div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-400 leading-relaxed">Tu mejor proveedor de equipo eléctrico, automatización y servicios industriales.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4">Navegación</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html"     class="hover:text-brand-red transition-colors">Inicio</a></li>
+          <li><a href="servicios.html" class="hover:text-brand-red transition-colors">Servicios</a></li>
+          <li><a href="nosotros.html"  class="hover:text-brand-red transition-colors">Nosotros</a></li>
+          <li><a href="contacto.html"  class="hover:text-brand-red transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4">Contáctanos</h4>
+        <ul class="space-y-3 text-sm">
+          <li><i class="fas fa-phone mr-2 text-brand-red"></i>33 1602 3850</li>
+          <li>
+            <a href="mailto:contacto@dlx.mx" class="hover:text-brand-red transition-colors">
+              <i class="fas fa-envelope mr-2 text-brand-red"></i>contacto@dlx.mx
+            </a>
+          </li>
+          <li><i class="fas fa-map-marker-alt mr-2 text-brand-red"></i>Vía de los Sauces 42, La Azucena, El Salto, Jal.</li>
+          <li class="pt-2">
+            <a href="#" data-wa="¡Hola DLX!" class="bg-green-600 hover:bg-green-700 text-white text-xs font-semibold px-4 py-2 rounded-full inline-block transition-colors">
+              <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 mt-10 pt-6 border-t border-white/10 text-center text-xs text-gray-500">
+      © 2025 DLX Innovación Electromecánica. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <a href="#" data-wa="¡Hola DLX! Me gustaría solicitar información." class="wa-float">
+    <i class="fab fa-whatsapp text-xl"></i>
+    <span class="hidden sm:inline">WhatsApp</span>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-red:      #C8102E;
+  --color-red-dark: #9E0D24;
+  --color-black:    #0f0f0f;
+  --color-dark:     #1a1a1a;
+  --color-gray:     #6B7280;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; }
+
+/* ── Animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp { animation: fadeInUp 0.65s ease both; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* ── Mobile menu ── */
+#mobile-menu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.35s ease;
+}
+#mobile-menu.open { max-height: 600px; opacity: 1; }
+
+/* ── Buttons ── */
+.btn-red {
+  background: var(--color-red);
+  color: #fff;
+  padding: 13px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.btn-red:hover {
+  background: var(--color-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(200,16,46,0.4);
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid rgba(255,255,255,0.55);
+  transition: all 0.2s;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-outline-white:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-dark {
+  background: var(--color-dark);
+  color: #fff;
+  padding: 13px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.btn-dark:hover {
+  background: #2d2d2d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* ── Section title accent line ── */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--color-red);
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+.section-title-left::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--color-red);
+  border-radius: 2px;
+  margin: 12px 0 0;
+}
+
+/* ── Cards ── */
+.service-card {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.13);
+}
+
+.industry-card { transition: transform 0.22s, box-shadow 0.22s; }
+.industry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+}
+
+.brand-badge {
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: #374151;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  letter-spacing: 0.03em;
+}
+.brand-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  border-color: var(--color-red);
+}
+
+/* ── Nav ── */
+.nav-link {
+  transition: color 0.2s;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-link:hover, .nav-link.active { color: var(--color-red); }
+
+/* ── Hero ── */
+.hero-gradient {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1c1c1c 50%, #7a0918 100%);
+}
+
+/* ── WhatsApp floating button ── */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background: #25D366;
+  color: #fff;
+  padding: 13px 22px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(37,211,102,0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.wa-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(37,211,102,0.55);
+}
